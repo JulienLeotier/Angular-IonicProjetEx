@@ -1,0 +1,23 @@
+<ion-content>
+    <ion-item>
+        <ion-label position="floating">Votre nom</ion-label>
+        <ion-input [(ngModel)]="name"></ion-input>
+    </ion-item>
+    <ion-chip *ngIf="name">
+        <ion-avatar>
+            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+        </ion-avatar>
+        <ion-label>{{name}}</ion-label>
+    </ion-chip>
+
+    <ion-title>La liste des étudiants en Web</ion-title>
+    <ion-card *ngFor="let appt of appartements">
+        <ion-item href="#" class="activated">
+            <ion-icon name="wifi" slot="start"></ion-icon>
+            <ion-label>{{appt.name}}</ion-label>
+            <ion-label>{{appt.area}}</ion-label>
+
+        </ion-item>
+    </ion-card>
+
+</ion-content>
