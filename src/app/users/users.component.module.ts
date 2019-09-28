@@ -14,4 +14,5 @@ import { UsersComponent } from './users.component';
   ],
   declarations: [UsersComponent]
 })
-export class UsersComponentModule {}
+export class UsersComponentModule {
+}

@@ -8,10 +8,12 @@ import {UserService} from '../api/user.service';
 export class UsersComponent implements OnInit {
   appartements:{"name":String, "area": String, 'price': String, "location": String}[];
   name: String = '';
+  src: String;
   constructor(private userService: UserService) { }
 
   ngOnInit() {
     this.appartements = this.userService.getUser();
+    this.src = "../assets/image.png";
   }
   public showName(): void {
     console.log(this.name)
